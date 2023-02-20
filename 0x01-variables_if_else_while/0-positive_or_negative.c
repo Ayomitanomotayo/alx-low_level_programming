@@ -1,11 +1,10 @@
 #include<stdlib.h>
 #include<time.h>
 #include<stdio.h>
-
 /**
- * main -  print negative, zero or positive value
- * return: Always (success)
+ *main -  print negative, zero or positive value
  *
+ *return: Always 0 (success)
  */
 int main(void)
 {
