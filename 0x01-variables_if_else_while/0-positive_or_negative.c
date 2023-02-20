@@ -1,12 +1,18 @@
 #include<stdlib.h>
+
 #include<time.h>
+
 #include<stdio.h>
+
+
 /**
- *main -  print negative, zero or positive value
+ * main -  print negative, zero or positive value
+ * Return: Always 0 (success)
  *
- *return: Always 0 (success)
  */
+
 int main(void)
+
 {
 
 	int n;
