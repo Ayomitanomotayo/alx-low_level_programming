@@ -2,9 +2,7 @@
 #include<time.h>
 #include<stdio.h>
 
-/** 
-* main - A c program to print negative, zero or positive number
-*/
+/* main - A c program to print negative, zero or positive number */
 int main(void)
 {
 
