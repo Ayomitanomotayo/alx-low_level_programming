@@ -1,8 +1,8 @@
 #ifndef MAIN_H
 
-#define main_h
+#define MAIN_H
 
-extern int _putchar(char c);
+extern int _putchar(char);
 
 extern void print_alphabet(void);
 
