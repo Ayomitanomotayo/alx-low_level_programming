@@ -5,7 +5,8 @@
  * @n: the int to check
  * Return: the absolute value of an integer
  */
-int_abs; int main(n)
+
+int _abs; int main()
 {
 	if (n >= 0)
 	{
