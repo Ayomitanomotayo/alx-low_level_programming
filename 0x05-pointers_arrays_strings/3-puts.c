@@ -1,11 +1,11 @@
 #include "main.h"
 /**
- * _puts -prints astring, followed by a new line, to stdout
+ * _puts -prints a string, followed by a new line, to stdout
  * @str: string to print
  */
 void _puts(char *str)
 {
-	while (*str != '\o')
+	while (*str != '\0')
 	{
 		_putchar(*str++);
 	}
