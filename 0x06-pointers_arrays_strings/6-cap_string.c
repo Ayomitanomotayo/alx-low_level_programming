@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * cap_string - capitalizes all words of a string
+ * cap_string - capitalizes all words of a string.
  * @str: The string to be capitalized.
  *
  * Return: A pinter to thechanged string.
