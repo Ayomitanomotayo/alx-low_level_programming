@@ -8,8 +8,6 @@
 
 int main(void)
 {
-	char *sname = "Programming is like building a multilingual puzzle";
-
-	puts(sname);
+	puts("Programming is like building a multilingual puzzle");
 	return (0);
 }
