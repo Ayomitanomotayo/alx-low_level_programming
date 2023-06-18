@@ -15,7 +15,7 @@ int main(void)
 		{
 			putchar('0' + zeros);
 			putchar('0' + ones);
-			if(zeros != 8 || ones != 9)
+			if (zeros != 8 || ones != 9)
 			{
 			putchar(',');
 			putchar(' ');
