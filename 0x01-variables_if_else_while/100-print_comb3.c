@@ -13,8 +13,8 @@ int main(void)
 	{
 		while (ones <= 9)
 		{
-			putchar('0' + ones);
 			putchar('0' + zeros);
+			putchar('0' + ones);
 			putchar(',');
 			putchar(' ');
 			ones++;
