@@ -1,24 +1,24 @@
 #include<stdio.h>
 /**
- * main - pinting hexadecimal 
+ * main - pinting hexadecimal
  *
  * Return: always success
  */
 int main(void)
 {
 	int num = 0;
-	char ch = '0';
 
-	while (ch <= '9')
+	while (num <= 9)
 	{
-		putchar(ch);
-		ch++;
+		putchar(num + '0');
+		num++;
 	}
-	ch = 'a';
-	while (ch <= 'f')
+
+	num = 10;
+	while (num <= 15)
 	{
-		putchar(ch);
-		ch++;
+		putchar(num + 'a' - 10);
+		num++;
 	}
 	putchar('\n');
 	return (0);
