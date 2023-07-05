@@ -1,8 +1,9 @@
 #include "main.h"
 /**
+ *_strlen_recursion - Finding the strinleght of a char
+ *@s: Pointer to string
  *
- *
- *
+ * Return: Always 0
  */
 int _strlen_recursion(char *s)
 {
@@ -10,5 +11,5 @@ int _strlen_recursion(char *s)
 	{
 		return (0);
 	}
-	return 1 + _strlen_recursion(s + 1);
+	return (1 + _strlen_recursion(s + 1));
 }
