@@ -1,21 +1,20 @@
 #include "main.h"
-#include "stddef.h"
 /**
  *memset - set number
- *@ptr: pointer to value
- *@value: integer value
- *@num: number to cet
+ *@s: pointer to value
+ *@b: integer value
+ *@n: number to cet
  *
  * Return: Always sucess
  */
-void *memset(void *ptr, int value, size_t num)
+char *_memset(char *s, char b, unsigned int n)
 {
-	unsigned char *p = ptr;
-	unsigned char val = (unsigned char)value;
+	int j = 0;
 
-	for (size_t i = 0; i < num; i++)
+	for (; n > 0; j++)
 	{
-	p[i] = val;
+		s[j] = b;
+		n--;
 	}
-	return (ptr);
+	return (s);
 }

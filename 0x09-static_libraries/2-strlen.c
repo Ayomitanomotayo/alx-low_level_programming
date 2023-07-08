@@ -1,18 +1,18 @@
 #include "main.h"
-#include "stddef.h"
 /**
  *strlen - printing string leght
  *@str: pointer to string
  *
  * Return: Always sucess
  */
-size_t strlen(const char *str)
+int _strlen(char *s)
 {
-	size_t length = 0;
+	int lenght = 0;
 
-	while (str[length] != '\0')
+	while (*s != '\0')
 	{
-	length++;
+	lenght++;
+	s++;
 	}
-	return (length);
+	return (lenght);
 }

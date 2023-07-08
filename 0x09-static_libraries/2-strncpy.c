@@ -1,5 +1,4 @@
 #include "main.h"
-#include "stddef.h"
 /**
  *strncpy - String copy
  *@dest: destination string
@@ -8,17 +7,20 @@
  *
  * Return: Always sucess
  */
-char *strncpy(char *dest, const char *src, size_t n)
+char *_strncpy(char *dest, char *src, int n)
 {
-	size_t i;
+	int b;
 
-	for (i = 0; i < n && src[i] != '\0'; i++)
+	b = 0;
+	while (b < n && src[b] != '\0')
 	{
-	dest[i] = src[i];
+	dest[b] = src[b];
+	b++;
 	}
-	for ( ; i < n; i++)
+	while (b < n)
 	{
-	dest[i] = '\0';
+	dest[b] = '\0';
+	b++;
 	}
 	return (dest);
 }

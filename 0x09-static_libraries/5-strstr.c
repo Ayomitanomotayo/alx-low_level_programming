@@ -1,5 +1,4 @@
 #include "main.h"
-#include "stddef.h"
 /**
  *strstr - substring
  *@haystack: First string
@@ -7,29 +6,20 @@
  *
  *Return: Always success
  */
-char *strstr(const char *haystack, const char *needle)
+char *_strstr(char *haystack, char *needle)
 {
-	if (*needle == '\0')
+	for (; *haystack != '\0'; haystack++)
 	{
-	return ((char *)haystack);
-	}
-	const char *p1 = haystack;
+	char *l = haystack;
+	char *p = needle;
 
-	while (*p1 != '\0')
+	while (*l == *p && *p != '\0')
 	{
-	const char *p1_temp = p1;
-	const char *p2 = needle;
-
-	while (*p1_temp != '\0' && *p2 != '\0' && *p1_temp == *p2)
-	{
-	p1_temp++;
-	p2++;
+	l++;
+	p++;
 	}
-	if (*p2 == '\0')
-	{
-	return ((char *)p1);
+	if (*p == '\0')
+	return (haystack);
 	}
-	p1++;
-	}
-	return (NULL);
+	return (0);
 }

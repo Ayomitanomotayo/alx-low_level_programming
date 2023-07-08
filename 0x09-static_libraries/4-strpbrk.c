@@ -1,27 +1,23 @@
 #include "main.h"
-#include "stddef.h"
 /**
  *strpbrk - string break
- *@str1: seraching for the occurence of string 1
- *@str2: Sarching for the occurence of string 2
+ *@s: seraching for the occurence of string 1
+ *@accept: Sarching for the occurence of string 2
  *
  * Return: Always success
  */
-char *strpbrk(const char *str1, const char *str2)
+char *_strpbrk(char *s, char *accept)
 {
-	while (*str1)
-	{
-	const char *p = str2;
+	int i;
 
-	while (*p)
+	while (*s)
 	{
-	if (*p == *str1)
+	for (i = 0; accept[i]; i++)
 	{
-	return ((char *) str1);
+	if (*s == accept[i])
+	return (s);
 	}
-	p++;
+	s++;
 	}
-	str1++;
-	}
-	return (NULL);
+	return ('\0');
 }

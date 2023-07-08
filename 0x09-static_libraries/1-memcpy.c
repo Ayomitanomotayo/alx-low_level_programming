@@ -1,5 +1,4 @@
 #include "main.h"
-#include "stddef.h"
 /**
  *memcpy - copying strings
  *@dest: destintion
@@ -8,14 +7,15 @@
  *
  * Return: Always sucess
  */
-void *memcpy(void *dest, const void *src, size_t n)
+char *_memcpy(char *dest, char *src, unsigned int n)
 {
-	char *dest_ptr = dest;
-	const char *src_ptr = src;
+	int r = 0;
+	int i = n;
 
-	while (n--)
+	for (; r < i; r++)
 	{
-	*dest_ptr++ = *src_ptr++;
+		dest[r] = src[r];
+		n--;
 	}
 	return (dest);
 }

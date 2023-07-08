@@ -1,5 +1,4 @@
 #include "main.h"
-#include "stddef.h"
 /**
  *strchr - string count
  *@str: pointer to string
@@ -7,19 +6,14 @@
  *
  *Return: Always success
  */
-char *strchr(const char *str, int c)
+char *_strchr(char *s, char c)
 {
-	while (*str != '\0')
+	int a = 0;
+
+	for (; s[a] >= '\0'; a++)
 	{
-	if (*str == c)
-	{
-	return ((char *) str);
+		if (s[a] == c)
+		return (&s[a]);
 	}
-	str++;
-	}
-	if (c == '\0')
-	{
-	return ((char *) str);
-	}
-	return (NULL);
+	return (0);
 }

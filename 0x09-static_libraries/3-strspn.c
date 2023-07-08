@@ -1,27 +1,29 @@
 #include "main.h"
-#include "string.h"
 /**
  *strspn - string span
- *@str1: Pointer to the first string
- *@str2: poniter to the second string
+ *@s: Pointer to the first string
+ *@accept: poniter to the second string
  *
  * Return: Always succes
  */
-size_t strspn(const char *str1, const char *str2)
+unsigned int _strspn(char *s, char *accept)
 {
-	const char *s1 = str1;
-	const char *s2;
+	unsigned int n = 0;
+	int o;
 
-	while (*s1)
+	while (*s)
 	{
-	for (s2 = str2; *s2; s2++)
+	for (o = 0; accept[o]; o++)
 	{
-	if (*s1 == *s2)
+	if (*s == accept[o])
+	{
+	n++;
 	break;
 	}
-	if (!*s2)
-	break;
-	s1++;
+	else if (accept[o + 1] == '\0')
+	return (n);
 	}
-	return ((size_t)(s1 - str1));
+	s++;
+	}
+	return (n);
 }

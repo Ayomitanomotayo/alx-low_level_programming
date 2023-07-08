@@ -1,29 +1,25 @@
 #include "main.h"
-#include "ctype.h"
 /**
  *atoi - converting string
- *@str - pointer to string
+ *@s - poiter to used string
  *
- * Return: Always sucess
  */
-int atoi(const char *str)
+int _atoi(char *s)
 {
-	int result = 0;
-	int sign = 1;
-	int i = 0;
+	int sign = 1, a = 0;
+	unsigned int res = 0;
 
-	while (isspace(str[i]))
-	i++;
-	if (str[i] == '-' || str[i] == '+')
+	while (!(s[a] <= '9' && s[a] >= '0') && s[a] != '\0')
 	{
-	if (str[i] == '-')
-	sign = -1;
-	i++;
+	if (s[a] == '-')
+	sign *= -1;
+	a++;
 	}
-	while (isdigit(str[i]))
+	while (s[a] <= '9' && (s[a] >= '0' && s[a] != '\0'))
 	{
-	result = result * 10 + (str[i] - '0');
-	i++;
+	res = (res * 10) + (s[a] - '0');
+	a++;
 	}
-	return (result * sign);
+	res *= sign;
+	return (res);
 }
