@@ -1,17 +1,23 @@
 #include "main.h"
 /**
  *strcmp: String compare
- *@str1: poniter to first string
- *@str2: [ointer to second string
+ *@s1: poniter to first string
+ *@s2: [ointer to second string
  *
  * Return: Alwats succes
  */
-int strcmp(const char *str1, const char *str2)
+int _strcmp(char *s1, char *s2)
 {
-	while (*str1 && (*str1 == *str2))
+	int i;
+
+	i = 0;
+	while (s1[i] != '\0' && s2[i] != '\0')
 	{
-	str1++;
-	str2++;
+	if (s1[i] != s2[i])
+	{
+	return (s1[i] - s2[i]);
 	}
-	return (*(unsigned char *)str1 - *(unsigned char *)str2);
+	i++;
+	}
+	return (0);
 }

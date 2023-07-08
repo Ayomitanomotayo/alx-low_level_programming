@@ -3,13 +3,13 @@
  *abs - absolute value
  *@num: Number to print
  *
- * Return: Always 0
+ * Return: Always
  */
-int abs(int num)
+int _abs(int n)
 {
-	if (num < 0)
+	if (n >= 0)
 	{
-		return (-num);
+		return (n);
 	}
-	return (num);
+	return (-n);
 }

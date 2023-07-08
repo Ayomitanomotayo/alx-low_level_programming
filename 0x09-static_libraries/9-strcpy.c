@@ -1,21 +1,24 @@
 #include "main.h"
 /**
  *strcpy - string copy
- *@: destintion string
+ *@dest: destintion string
  *@src: Source string
  *
  * Return: Always success
  */
-char *strcpy(char *dest, const char *src)
+char *_strcpy(char *dest, char *src)
 {
-	char *originalDest = dest;
+	int l = 0;
+	int x = 0;
 
-	while (*src != '\0')
+	while (*(src + l) != '\0')
 	{
-	*dest = *src;
-	dest++;
-	src++;
+		l++;
 	}
-	*dest = '\0';
-	return (originalDest);
+	for ( ; x < l ; x++)
+	{
+		dest[x] = src[x];
+	}
+	dest[l] = '\0';
+	return (dest);
 }
