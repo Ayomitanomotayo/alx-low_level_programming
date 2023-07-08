@@ -3,22 +3,25 @@
  *strcpy - string copy
  *@dest: destintion string
  *@src: Source string
+ *@n: number counted 
  *
  * Return: Always success
  */
-char *_strcpy(char *dest, char *src)
+char *_strncpy(char *dest, char *src, int n)
 {
-	int l = 0;
-	int x = 0;
+	int j;
 
-	while (*(src + l) != '\0')
+	j = 0;
+	while (j < n && src[j] != '\0')
 	{
-		l++;
+		dest[j] = src[j];
+		j++;
 	}
-	for ( ; x < l ; x++)
+	while (j < n)
 	{
-		dest[x] = src[x];
+		dest[j] = '\0';
+		j++;
 	}
-	dest[l] = '\0';
+
 	return (dest);
 }
