@@ -1,12 +1,5 @@
 #include <stdio.h>
 #include <stdarg.h>
-/**
- * print_all: A variadic function that prints all types
- *@*: pointer to all types
- *@format: The first argument
- *@...: Elipse variadic arguments
- * Return: Always success
- */
 void print_all(const char * const format, ...)
 {
 	const char *first_format = format;
